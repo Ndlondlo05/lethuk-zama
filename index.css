@@ -1,0 +1,139 @@
+/* =====================================
+
+   LETHU'S GRAPHICS
+
+   COLOURS: BLACK, GOLD AND WHITE
+
+===================================== */
+
+:root {    --black: #050505;
+    --black-light: #111111;
+    --gold: #ffb900;
+    --gold-dark: #e5a400;
+    --white: #ffffff;
+    --grey: #bdbdbd;
+    --light-bg: #f7f7f7;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.gold,
+.hero-content h1 span,
+.section-heading h2 span,
+.about-content h2 span,
+.contact-content h2 span {
+    color: var(--gold);
+}
+
+/* =====================================
+
+   NAVIGATION BAR
+
+===================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    min-height: 85px;
+    background: var(--black);
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo-text small {
+    display: block;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 5px;
+}
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.nav-links a {
+    color: var(--white);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links .contact-btn {
+    padding: 11px 20px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.nav-links .contact-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
