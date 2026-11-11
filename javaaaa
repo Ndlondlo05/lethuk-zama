@@ -1,0 +1,184 @@
+
+/* =====================================
+   LETHU'S GRAPHICS
+   WEBSITE JAVASCRIPT
+===================================== */
+
+
+/* =====================================
+   1. MOBILE NAVIGATION
+===================================== */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+        const isOpen = navLinks.classList.contains("active");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+
+    });
+
+}
+
+
+/* =====================================
+   2. CLOSE MENU AFTER CLICKING A LINK
+===================================== */
+
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+    });
+
+});
+
+
+/* =====================================
+   3. CLOSE MENU WHEN CLICKING OUTSIDE
+===================================== */
+
+document.addEventListener("click", function (event) {
+
+    if (
+        navLinks &&
+        menuToggle &&
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+    ) {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+    }
+
+});
+
+
+/* =====================================
+   4. AUTOMATIC COPYRIGHT YEAR
+===================================== */
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+
+    yearElement.textContent = new Date().getFullYear();
+
+}
+
+
+/* =====================================
+   5. SMOOTH SECTION NAVIGATION
+===================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+        const targetId = this.getAttribute("href");
+
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+
+            event.preventDefault();
+
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+});
+
+
+/* =====================================
+   6. SERVICE CARD ANIMATIONS
+===================================== */
+
+const serviceCards = document.querySelectorAll(".service-card");
+
+if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    serviceCards.forEach(function (card) {
+
+        card.classList.add("reveal");
+
+        observer.observe(card);
+
+    });
+
+}
+
+
+/* =====================================
+   7. WHATSAPP CONTACT FUNCTION
+===================================== */
+
+function contactWhatsApp() {
+
+    const phoneNumber = "27713320984";
+
+    const message =
+        "Hello Lethu's Graphics! I would like to enquire about your graphic design services.";
+
+    const whatsappURL =
+        "https://wa.me/" + phoneNumber +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank", "noopener");
+
+}
+
+
+/* =====================================
+   8. WELCOME MESSAGE IN CONSOLE
+===================================== */
+
+console.log(
+    "%c Welcome to Lethu's Graphics! ",
+    "background: #ffb900; color: #000; font-size: 18px; font-weight: bold; padding: 10px;"
+);
+
+console.log("Creative thinking. Quality design.");
