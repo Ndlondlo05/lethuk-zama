@@ -1,0 +1,247 @@
+/* =====================================
+
+   LETHU'S GRAPHICS
+
+   COLOURS: BLACK, GOLD AND WHITE
+
+===================================== */
+  @import url('https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&display=swap');
+
+:root {    --black: #050505;
+    --black-light: #111111;
+    --gold: #ffb900;
+    --gold-dark: #e5a400;
+    --white: #ffffff;
+    --grey: #bdbdbd;
+    --light-bg: #f7f7f7;
+    --red: #ff0000;
+    --yellow: #fbf700; 
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.gold,
+.hero-content h1 span,
+.section-heading h2 span,
+.about-content h2 span,
+.contact-content h2 span {
+    color: var(--gold);
+}
+
+/* =====================================
+
+   NAVIGATION BAR
+
+===================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    min-height: 85px;
+    background: var(--white);
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--black);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--black);
+}
+
+.logo-text small {
+    display: block;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 5px;
+}
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.nav-links a {
+    color: var(--black);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links .contact-btn {
+    padding: 11px 20px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.nav-links .contact-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+/* hero buttons and links */
+.hero-buttons{
+    display: inline-block;
+    padding: 14px 32px;
+    background: #00eafb;
+    color: #050505;
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+    border: 4px solid #e5a400;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+}
+
+.hero-description{
+    font-size: 35px;
+}
+
+
+}
+.banner-img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:  100%;
+    background: #e4e7e7bb;
+    color: #dcebe9b2;
+    background-size: middle; 
+    text-align: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+/* style for pricing section */
+.content {
+    color: var(--white);
+}
+.pricing,.text{
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+hero-image{
+    background-image: url("images_lethu.jpg/IMG-20261117-WA0007.jpg");
+    backr
+}
+/* Promotional banner*/
+
+.promo-banner{
+       background: var (--yellow);
+       color: var(--gold-dark);
+       text-align: center;
+       padding: 40px 20px;
+}
+.promo-title{
+    color: var(--black);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 8px 0 20px
+    
+
+}
+.promo-text{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.promo-banner.btn{
+    background: #ffffff;
+    color: var(--grey);
+
+}
+.promo-banner.btn: hover{
+    background: #ffffff;
+    color: var(--gold);
+}
+
+/* pages rule*/
+.page{
+    display: none;
+}
+.page.active {
+    display: block;
+
+}
+.hero-design{
+    background: #000000b2 ;
+    border: 5px solid var(--gold) ;
+    text-align: center;
+    border-raidus: 25px ;
+
+    box-shadow: 
+      0 0 10px rgba(236, 203, 12, 0.918),
+      0 0 25px    rgba(236, 203, 12, 0.911),
+      0 0 50px   rgba(236, 202, 12, 0.904), 
+      inset 0 0 12px rgba(236, 202, 12, 0.856);   
+
+}
+.font{
+   font-family:"Agrave Pro", serif;
+   font-weight: 1000px;
+   font-size: x-large;
+}
